@@ -12,3 +12,21 @@ Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
 # Install the OpenSSH Server
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+
+# Change the shell (cmd by default)
+
+# powershell
+New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
+# bash
+New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH\" -Name DefaultShell -Value "C:\Windows\System32\bash.exe" -PropertyType String -Force
+
+# powershell core
+
+# Start sshd Service
+Start-Service sshd
+# OPTIONAL but recommended:
+Set-Service -Name sshd -StartupType 'Automatic'
+# Confirm the Firewall rule is configured. It should be created automatically by setup. 
+Get-NetFirewallRule -Name *ssh*
+# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled 
+
