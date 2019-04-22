@@ -2,7 +2,7 @@
 # https://stackoverflow.com/questions/10781697/convert-unix-time-with-powershell
 # http://codeclimber.net.nz/archive/2007/07/10/convert-a-unix-timestamp-to-a-net-datetime/
 
-# add format (belgian-french)
+# added format (belgian-french)
 Function Convert-FromUnixDate ($UnixDate) {
    [timezone]::CurrentTimeZone.ToLocalTime(([datetime]'1/1/1970').AddSeconds($UnixDate)).ToString('dd-MM-yyyy hh:mm:ss')
 }
