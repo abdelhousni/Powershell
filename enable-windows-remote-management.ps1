@@ -1,10 +1,15 @@
 # source :
 # How to enable the Firewall rules required by Veeam ONE on the Windows Server Core OS : https://www.veeam.com/kb2696
 # How to Enable COM+ in Windows Server 2016 : https://www.jorgebernhardt.com/how-to-enable-com-in-windows-server-2016/
-Set-NetFirewallRule -Name 'RemoteEventLogSvc-NP-In-TCP' -Enabled True
-Set-NetFirewallRule -Name 'RemoteEventLogSvc-In-TCP' -Enabled True
-Set-NetFirewallRule -Name 'RemoteEventLogSvc-RPCSS-In-TCP' -Enabled True
-Set-NetFirewallRule -Name 'ComPlusNetworkAccess-DCOM-In' -Enabled True
+Set-NetFirewallRule -Name 'RemoteEventLogSvc-NP-In-TCP' -Profile Domain -Enabled True
+Set-NetFirewallRule -Name 'RemoteEventLogSvc-In-TCP' -Profile Domain -Enabled True
+Set-NetFirewallRule -Name 'RemoteEventLogSvc-RPCSS-In-TCP' -Profile Domain -Enabled True
+Set-NetFirewallRule -Name 'ComPlusNetworkAccess-DCOM-In' -Profile Domain -Enabled True
+
+# Gestion des services
+Set-NetFirewallRule -Name 'RemoteSvcAdmin-In-TCP' -Profile Domain -Enabled True
+Set-NetFirewallRule -Name 'RemoteSvcAdmin-NP-In-TCP' -Profile Domain -Enabled True
+Set-NetFirewallRule -Name 'RemoteSvcAdmin-RPCSS-In-TCP' -Profile Domain -Enabled True
 
 # cmd equivalent
 # netsh advfirewall firewall set rule name="Remote Event Log Management (NP-In)" new enable= Yes
@@ -28,3 +33,4 @@ Set-NetFirewallRule -Name 'ComPlusNetworkAccess-DCOM-In' -Enabled True
   # A faire sur la machine de Management
   #   Autorisation du serveur Remote (Dans le cas ou ils ne sont pas dans le même domaine)
     Set-Item WSMan:\localhost\Client\TrustedHosts <IP_Remote_Server>
+
