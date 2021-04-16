@@ -13,5 +13,3 @@ $ComputerStencil = $application.Documents.Add("Computers and Monitors.vss")
 $pc = $ComputerStencil.Masters.Item("PC")
 $shape1 = $page.Drop($pc, 2.2, 6.8)
 $shape1.Text = "Some text...."
-
-$document.
