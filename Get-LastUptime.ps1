@@ -1,3 +1,5 @@
+# Get Last Uptime (via PowerShell via WMI)
+
 # From https://blogs.technet.microsoft.com/heyscriptingguy/2013/03/27/powertip-get-the-last-boot-time-with-powershell/
 
 # Method 1

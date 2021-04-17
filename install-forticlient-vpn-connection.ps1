@@ -1,3 +1,4 @@
+# VPN Fortinet installation script for Windows 10
 # Script d'installation du VPN Fortinet pour Windows 10
 
 # Création de la connexion FortiClient

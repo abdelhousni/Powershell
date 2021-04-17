@@ -1,3 +1,5 @@
+# Get Leases from Active Directory DHCP Server
+
 $server = 'ServerAddress.domain'
 $csvpath = '.\'
 $rundate = Get-Date -Format 'yyyyMMdd'

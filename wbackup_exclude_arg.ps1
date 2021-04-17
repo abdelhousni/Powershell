@@ -1,3 +1,4 @@
+# Script runing Windows Server Backup Job to a remote share excluding *.ft files and *ftgi* folders
 # Script exécutant un Job Windows Backup vers un share distant en excluant les fichiers *.ft et dossiers *ftgi*
 #
 # source : https://social.technet.microsoft.com/wiki/contents/articles/2216.windows-server-2008-r2-powershell-backup.aspx
