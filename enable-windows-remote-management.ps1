@@ -1,3 +1,5 @@
+# Enable winrm (Windows Remote Management via PowerShell)
+
 # source :
 # How to enable the Firewall rules required by Veeam ONE on the Windows Server Core OS : https://www.veeam.com/kb2696
 # How to Enable COM+ in Windows Server 2016 : https://www.jorgebernhardt.com/how-to-enable-com-in-windows-server-2016/

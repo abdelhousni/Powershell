@@ -1,3 +1,4 @@
+# Citrix - Get Sessions stats for PRTG Monitoring
 # Abdellatif Housni 2020
 # Monitoring des Sessions Citrix
 # pré-requis : Broker_PowerShellSnapIn_x64.msi

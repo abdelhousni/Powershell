@@ -1,3 +1,5 @@
+# List Printers (name, IP Address) from Windows Printer Server
+
 #source : https://powershell.org/forums/topic/get-name-and-ip-address-of-a-printer/
 
 $print_server = 'server-printer'

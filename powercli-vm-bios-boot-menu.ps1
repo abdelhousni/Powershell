@@ -1,3 +1,5 @@
+# PowerCLI Change VM Bios Startup Delay
+
 # source : https://code.vmware.com/forums/2530/vsphere-powercli#545814
 
 $vmName = 'TestVM'
